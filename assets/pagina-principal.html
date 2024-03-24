@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inmobiliaria L_H</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <style>
+        /* Estilos para el contenedor */
+        #header-container {
+            position: relative;
+            text-align: center;
+        }
+
+        /* Estilos para la imagen */
+        #header-container img {
+            max-width: 1000px;
+            height: auto;
+        }
+
+        /* Estilos para el texto */
+        #header-container h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 36px;
+            color: black;
+        }
+
+        /* Estilos para el navbar */
+        #navbar {
+            background-color: rgb(199, 195, 195); 
+            padding: 10px; 
+        }
+
+        /* Estilos para los enlaces del navbar */
+        #navbar a {
+            color: black; /* Color del texto negro */
+            margin-right: 20px; /* Espaciado entre enlaces */
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a class="navbar-brand" href="#">Inmobiliaria L_H</a>
+        <a href="./venta.html" id="venta" onclick="changeColor('venta')">Venta</a>
+        <a href="./arriendo.html" id="arriendo" onclick="changeColor('arriendo')">Arriendo</a>
+    </nav>
+    <header id="header-container">
+        <img src="imagen de portada.jpeg" alt="Imagen del header">
+        <h1>DESCUBRE LAS OPORTUNIDADES QUE OFRECE INMOBILIARIA L_H</h1>
+    </header>
+
+    <script>
+        function changeColor(id) {
+            document.getElementById(id).style.color = "green";
+        }
+    </script>
+</body>
+</html>
+
+

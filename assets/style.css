@@ -1,0 +1,41 @@
+body {
+    background-color: #f0f0f0;
+    color: #333; /* Color de las letras */
+}
+
+nav {
+    background-color: #fff; /* Color del navbar */
+    color: #0066cc;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header img {
+    width: 100%;
+}
+
+header h1 {
+    color: #0066cc;
+}
+
+.propiedad {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 200px;
+    padding: 20px;
+    width: 200px;
+}
+
+/* Media query para pantallas de hasta 600px de ancho */
+@media (max-width: 600px) {
+    .propiedad {
+        width: 100%; /* Las propiedades ocupan todo el ancho de la pantalla en móviles */
+    }
+}
+
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Propiedades en Venta</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+    
+        .contenedor {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .propiedad {
+            width: 200px;
+            text-align: center;
+            border: 2px solid gray; 
+            padding: 10px; 
+        }
+
+        .propiedad img {
+            max-width: 100%; 
+            height: auto; 
+        }
+
+        .ver-mas {
+            display: block;
+            width: 150px;
+            height: 50px;
+            margin: 20px 0; 
+            background-color: rgb(189, 185, 185);
+            color: black;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: left; 
+            border: 1px solid black; 
+        }
+
+        h1 {
+            font-size: 2em; 
+        }
+
+                /* Estilo para el botón "Vuelva atrás" */
+                .volver {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: rgb(167, 164, 164); /* Color de fondo gris */
+            color: black; /* Color de texto negro */
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Botón "Vuelva atrás" -->
+    <button class="volver" onclick="history.back()">VOLVER</button>
+
+    <h1 style="text-align: left;">Propiedad en Venta</h1> 
+    <div class="contenedor">
+        <div class="propiedad">
+            <img src="depto.venta_1.jpeg" alt="Imagen de la propiedad">
+            <p><i class="fas fa-building"></i> Departamento Los Alece  Temuco</p>
+            <p>Cerca: De Hospitales, Colegios, Carabineros, Supermercados,farmacias </p>
+            <p><i class="fas fa-bed"></i> 3 Dorm. <i class="fas fa-bath"></i> 3 B.</p>
+            <p><i class="fas fa-map-marker-alt"></i> Direcion:Barrio Raquileo Norte N 3245 Telefono:+(545)142-4562 </p>
+            <p id="smoke"><i class="fas fa-smoking-ban"></i> Prohibido fumar</p>
+            <p id="pets"><i class="fas fa-dog"></i> Mascotas permitidas</p>
+        </div>
+
+        <div class="propiedad">
+            <img src="depto.vende_2.jpeg" alt="Imagen de la propiedad">
+            <p><i class="fas fa-building"></i> Depatamento/Condominio Los Robles-Pucon</p>
+            <p>Cerca: Del Lago, Restaurantes, Termas</p>
+            <p><i class="fas fa-bed"></i> 4 Dorm. <i class="fas fa-bath"></i> 3 B.</p>
+            <p><i class="fas fa-map-marker-alt"></i> Direccion:Recidencial Los Landeros N 567 Telefono:+(543)987-6543</p>
+            <p id="smoke"><i class="fas fa-smoking-ban"></i> Prohibido fumar</p>
+            <p id="pets"><i class="fas fa-dog"></i> Mascotas permitidas</p>
+        </div>
+
+        <div class="propiedad">
+            <img src="depto.venta_3.jpeg" alt="Imagen de la propiedad">
+            <p><i class="fas fa-building"></i> Depatamento/Condominio Los Copihues- Concepcion</p>
+            <p>Cerca de centros comerciales, Hospital, Colegios, Supermercado </p>
+            <p><i class="fas fa-bed"></i> 3 Dorm.  <i class="fas fa-bath"></i> 2 B.</p>
+            <p><i class="fas fa-map-marker-alt"></i> Direccion:Condominio Nain Del Sol N 890 Telefono:+(547)436-4563</p>
+            <p id="smoke"><i class="fas fa-smoking"></i> Permitido fumar</p>
+            <p id="pets"><i class="fas fa-dog"></i> Mascotas permitidas</p>
+        </div>
+    </div>
+    <div class="ver-mas">VER + </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var smokeElements = document.querySelectorAll('#smoke');
+            var petsElements = document.querySelectorAll('#pets');
+
+            smokeElements.forEach(function(element) {
+                if (element.textContent.includes('Prohibido')) {
+                    element.style.color = 'red';
+                } else {
+                    element.style.color = 'green';
+                }
+            });
+
+            petsElements.forEach(function(element) {
+                element.style.color = 'green';
+            });
+        });
+    </script>
+</body>
+</html>
